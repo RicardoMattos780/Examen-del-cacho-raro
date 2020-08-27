@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Juegos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Juegos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>El Hombre de Ojalata te ah retado!!!</ion-card-subtitle>
+      <img width="400" src="https://vignette.wikia.nocookie.net/fategrandorder/images/f/f9/Babbage1.png/revision/latest?cb=20151228212323" >
+    </ion-card-header>
+  
+    <ion-card-content>
+    
+      
+
+      <ion-item>
+        <ion-label>Dado 1</ion-label>
+        <ion-input [(ngModel)]="dado1" type="number" value="0"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Dado 2</ion-label>
+        <ion-input [(ngModel)]="dado2" type="number" value="0"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Dado 3</ion-label>
+        <ion-input [(ngModel)]="dado3" type="number" value="0"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Dado 4</ion-label>
+        <ion-input [(ngModel)]="dado4" type="number" value="0"></ion-input>
+      </ion-item>
+
+      <ion-button color="primary" (click)="calcularSuma()" expand="block" fill="outline">Tirar Dados</ion-button>
+
+      <div *ngIf="suma > 0" class="resultadodados">
+        {{ suma }}
+      </div>
+      
+
+      <div class="ganar" >
+        {{ resultado }}
+      </div>
+
+
+    </ion-card-content>
+  </ion-card>
+  
+  
+
+</ion-content>
